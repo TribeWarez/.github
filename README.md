@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://via.placeholder.com/120x120.png?text=PoT-O" alt="TribeWarez Logo" width="120">
+  <img src="https://github.com/user-attachments/assets/68df66ec-acd3-4d81-9822-f13f82dd50d8" alt="TribeWarez Logo" width="800">
   <h1 align="center">TribeWarez</h1>
   <p align="center">
     <strong>AI-powered blockchain ecosystem evolving Proof-of-Work into Proof of Tensor Optimizations (PoT-O)</strong><br>
