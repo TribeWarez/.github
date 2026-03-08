@@ -1,120 +1,157 @@
-# TribeWarez
-
-**AI-powered blockchain ecosystem for PoT-O mining, DeFi, and decentralized applications on Solana and EVM testnets.**
+<p align="center">
+  <img src="https://via.placeholder.com/120x120.png?text=PoT-O" alt="TribeWarez Logo" width="120">
+  <h1 align="center">TribeWarez</h1>
+  <p align="center">
+    <strong>AI-powered blockchain ecosystem evolving Proof-of-Work into Proof of Tensor Optimizations (PoT-O)</strong><br>
+    Multi-chain testnets • On-chain DeFi • Edge-device mining • Synthetic tensor challenges • Open alpha/beta on Solana + EVM
+  </p>
+  <p align="center">
+    <a href="https://github.com/TribeWarez/pot-o-core/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License: MIT">
+    </a>
+    <a href="https://github.com/TribeWarez/pot-o-validator/actions/workflows/ci.yml">
+      <img src="https://github.com/TribeWarez/pot-o-validator/actions/workflows/ci.yml/badge.svg" alt="PoT-O Validator CI">
+    </a>
+    <a href="https://github.com/TribeWarez/pot-o-contractz/actions/workflows/ci.yml">
+      <img src="https://github.com/TribeWarez/pot-o-contractz/actions/workflows/ci.yml/badge.svg" alt="Contracts CI">
+    </a>
+    <a href="https://crates.io/crates/pot-o-core">
+      <img src="https://img.shields.io/crates/v/pot-o-core?style=flat-square&logo=rust&logoColor=orange" alt="pot-o-core on crates.io">
+    </a>
+    <a href="https://crates.io/crates/ai3-lib">
+      <img src="https://img.shields.io/crates/v/ai3-lib?style=flat-square&logo=rust&logoColor=orange" alt="ai3-lib on crates.io">
+    </a>
+    <a href="https://huggingface.co/Tribewarez">
+      <img src="https://img.shields.io/badge/Hugging%20Face-Tribewarez-orange?style=flat-square&logo=huggingface" alt="Hugging Face">
+    </a>
+    <img src="https://img.shields.io/badge/Status-Live%20Beta-purple?style=flat-square" alt="Status: Live Beta">
+  </p>
+  <p align="center">
+    <strong>Jump to:</strong><br>
+    <a href="https://huggingface.co/Tribewarez">🤗 Hugging Face (Datasets &amp; Models)</a> •
+    <a href="https://defi.tribewarez.com/">💱 DeFi Portal</a> •
+    <a href="https://mystic.tribewarez.com/">🔮 Mystic</a> •
+    <a href="https://docs.tribewarez.com/">📖 Docs</a>
+  </p>
+</p>
 
 ---
 
 ## Overview
 
-TribeWarez is a blockchain ecosystem that replaces traditional proof-of-work with **Proof of Tensor Optimizations (PoT-O)**, and provides multi-chain testnets, on-chain DeFi programs, and a token economy designed for mining, staking, and swaps. Many of our repositories are currently undergoing cleanup and validation; **most will be released to the public** once that work is complete.
+TribeWarez is an **open-source (MIT)** ecosystem pioneering **Proof of Tensor Optimizations (PoT-O)** — replacing energy-intensive hashing with verifiable tensor computations, neural path matching, and information-theoretic proofs. Built for low-power edge devices (ESP32, Raspberry Pi clusters), synthetic data generation, and multi-chain DeFi on Solana + EVM testnets.
 
-## Ecosystem Components
+**Early 2026 status**: Live beta / open alpha. Most components are experimental, actively developed, and progressively open-sourced. Expect evolving specs, rough edges, and rapid iteration.
 
-- **Proof of Tensor Optimizations (PoT-O)** — Replaces SHA-256 mining with tensor computation proofs validated by MML path optimality and neural inference path matching (standardized in TW-RPC-001).
-- **Multi-Chain Testnets** — Solana test validator with RPC proxy and Helius fallback, plus a Geth PoW EVM testnet (chain ID 5555).
-- **DeFi Programs** — On-chain staking, AMM swap, and vault/escrow programs built with Anchor on Solana (TW-RPC-003 staking, TW-RPC-004 vault).
-- **ESP-Ready Mining** — Tensor challenges sized for ESP32-S and ESP8266 microcontrollers for IoT solo mining.
-- **Token Economy** — PTtC (Pumped TRIB€-test Coin) and NMTC (Numerologic Master Coin) with mining rewards, staking, and swap capabilities.
-- **Extensible Architecture** — Trait-based extension points for device protocols, multi-node VPN mesh, pool strategies, and cross-chain bridges (TW-RPC-005).
+> **🔓 Open Source Commitment:** All core implementation logic is MIT-licensed and free to contribute. Some repositories are being cleaned up and stabilized — they will be fully opened for public contribution upon their 1.0 release. Several are open right now. Join the guild!
 
-## Submodules (PoT-O crates, firmware, and CLI)
+## Key Features
 
-The PoT-O validator, ESP miner, and desktop miner use library crates, firmware, and the CLI that can live in separate GitHub repos and are consumed here as **git submodules**.
+- **PoT-O Consensus** — Tensor-based proofs (MML path optimality + inference matching) per TW-RPC-001
+- **Edge Mining** — ESP32/ESP8266 firmware for solo mining tensor challenges
+- **Synthetic Data Gen** — Clustered challenge generation (Ch7 tensor dims & networking effects) → Hugging Face datasets
+- **Multi-Chain Testnets** — Solana validator + proxy, Geth EVM (chain ID 5555)
+- **On-Chain DeFi** — Staking, AMM swaps, vaults (Anchor programs / Solana smart contracts)
+- **DeFi Games** — On-chain games (Mystic Numbers and more) blending DeFi mechanics with gameplay
+- **Apps & Tools** — Mystic Scribe Engine (fun web app), docs portal, CLI miner
+- **Extensible** — Trait-based hooks for protocols, meshes, bridges
 
-- **Rust library crates:** `pot-o-core`, `ai3-lib`, `pot-o-mining`, `pot-o-extensions` (under `gateway.tribewarez.com/testnet.rpc.gateway.tribewarez.com/pot-o-validator/`).
-- **ESP firmware:** `esp-pot-o-miner` (under `.../pot-o-validator/firmware/esp-pot-o-miner`).
-- **Desktop CLI miner:** [pot-o-miner-cli](https://github.com/TribeWarez/pot-o-miner-cli) (bash + Python 3) — under `gateway.tribewarez.com/testnet.rpc.gateway.tribewarez.com/pot-o-miner-cli` when used as a submodule of the testnet gateway repo.
+## Ecosystem Repositories
 
-**Clone with submodules:**
+### ⚙️ Core Protocol & Validator
+
+| Repo | Description | Language | CI | Links |
+|------|-------------|----------|----|-------|
+| **[pot-o-core](https://github.com/TribeWarez/pot-o-core)** | Core types & utilities for PoT-O | Rust | [![CI](https://github.com/TribeWarez/pot-o-core/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/pot-o-core/actions/workflows/ci.yml) | [![crates.io](https://img.shields.io/crates/v/pot-o-core?style=flat-square)](https://crates.io/crates/pot-o-core) [docs.rs](https://docs.rs/pot-o-core) |
+| **[ai3-lib](https://github.com/TribeWarez/ai3-lib)** | AI3 support for validator/miner | Rust | [![CI](https://github.com/TribeWarez/ai3-lib/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/ai3-lib/actions/workflows/ci.yml) | [![crates.io](https://img.shields.io/crates/v/ai3-lib?style=flat-square)](https://crates.io/crates/ai3-lib) [docs.rs](https://docs.rs/ai3-lib) |
+| **[pot-o-mining](https://github.com/TribeWarez/pot-o-mining)** | Mining coordination & neural-path logic | Rust | [![CI](https://github.com/TribeWarez/pot-o-mining/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/pot-o-mining/actions/workflows/ci.yml) | crates.io forthcoming |
+| **[pot-o-extensions](https://github.com/TribeWarez/pot-o-extensions)** | DeFi, staking, chain extensions | Rust | [![CI](https://github.com/TribeWarez/pot-o-extensions/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/pot-o-extensions/actions/workflows/ci.yml) | crates.io forthcoming |
+| **[pot-o-validator](https://github.com/TribeWarez/pot-o-validator)** | PoT-O Validator HTTP API & consensus node | Rust | [![CI](https://github.com/TribeWarez/pot-o-validator/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/pot-o-validator/actions/workflows/ci.yml) | [RPC: pot.rpc.gateway.tribewarez.com](https://pot.rpc.gateway.tribewarez.com) |
+
+### 📜 Smart Contracts & DeFi Programs
+
+| Repo | Description | Language | CI | Links |
+|------|-------------|----------|----|-------|
+| **[pot-o-contractz](https://github.com/TribeWarez/pot-o-contractz)** | Solana programs (staking, AMM, vault/escrow) for PTtC/NMTC | Rust (Anchor) | [![CI](https://github.com/TribeWarez/pot-o-contractz/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/pot-o-contractz/actions/workflows/ci.yml) | [DeFi Portal](https://defi.tribewarez.com) |
+
+### ⛏️ Mining Clients
+
+| Repo | Description | Language | CI | Links |
+|------|-------------|----------|----|-------|
+| **[esp-pot-o-miner](https://github.com/TribeWarez/esp-pot-o-miner)** | ESP32-S / ESP8266 mining firmware | C/C++ (PlatformIO) | [![CI](https://github.com/TribeWarez/esp-pot-o-miner/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/esp-pot-o-miner/actions/workflows/ci.yml) | PlatformIO registry forthcoming |
+| **[pot-o-miner-cli](https://github.com/TribeWarez/pot-o-miner-cli)** | Self-contained bash CLI for PC mining | Shell/Python | [![CI](https://github.com/TribeWarez/pot-o-miner-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/pot-o-miner-cli/actions/workflows/ci.yml) | — |
+
+### 🧪 Synthetic Data & Research
+
+| Repo | Description | Language | CI | Links |
+|------|-------------|----------|----|-------|
+| **[pot-o-ch7-cluster](https://github.com/TribeWarez/pot-o-ch7-cluster)** | Distributed synthetic Ch7 challenge generator (Pi/ESP32 clusters) | Python/Jupyter | [![CI](https://github.com/TribeWarez/pot-o-ch7-cluster/actions/workflows/ci.yml/badge.svg)](https://github.com/TribeWarez/pot-o-ch7-cluster/actions/workflows/ci.yml) [![HF Space](https://github.com/TribeWarez/pot-o-ch7-cluster/actions/workflows/hf-space.yml/badge.svg)](https://github.com/TribeWarez/pot-o-ch7-cluster/actions/workflows/hf-space.yml) | [🤗 HF Dataset](https://huggingface.co/datasets/Tribewarez/synthetic-pot-o-challenges-ch7-v1) |
+
+### 🎮 DeFi Games
+
+| Repo | Description | Status | Links |
+|------|-------------|--------|-------|
+| **[Mystic Numbers](https://github.com/TribeWarez/mystic-numbers)** | On-chain DeFi number game — first in the TribeWarez DeFi games series | Coming Soon | [🔮 mystic.tribewarez.com](https://mystic.tribewarez.com) |
+
+### 🌐 Apps & Web
+
+| Repo | Description | Language | CI | Links |
+|------|-------------|----------|----|-------|
+| **[mystic-scribe-engine](https://github.com/TribeWarez/mystic-scribe-engine)** | Fun web app — Mystic Scribe Engine | TypeScript/JS | Coming Soon | [🔮 mystic.tribewarez.com](https://mystic.tribewarez.com) |
+| **[docs.tribewarez.com](https://github.com/TribeWarez/docs.tribewarez.com)** | Documentation portal & RFC drafts | Dockerfile/Markdown | [![Build IETF drafts](https://github.com/TribeWarez/docs.tribewarez.com/actions/workflows/build-ietf-drafts.yml/badge.svg)](https://github.com/TribeWarez/docs.tribewarez.com/actions/workflows/build-ietf-drafts.yml) | [📖 docs.tribewarez.com](https://docs.tribewarez.com) |
+
+## Quick Start (Local Stack)
+
+Prerequisites: Docker, Docker Compose, Git, Make
 
 ```bash
-git clone --recurse-submodules https://github.com/TribeWarez/tribe tribe
+git clone --recurse-submodules https://github.com/TribeWarez/tribe
 cd tribe
+cp .env.example .env   # Edit with keys/secrets (never commit!)
+make infra-up          # nginx-proxy + SSL
+make web3-up           # DeFi portal, terminal, docs
+make web3-rpc-up       # Testnet RPCs + PoT-O validator
 ```
 
-**If you already cloned without submodules:**
-
-```bash
-git submodule update --init --recursive
-```
-
-**Converting in-repo crates/firmware to submodules (one-time):**  
-Create the corresponding empty repos under your GitHub org (`tribewarez/pot-o-core`, `ai3-lib`, `pot-o-mining`, `pot-o-extensions`, `esp-pot-o-miner`), then from the repo root run:
-
-```bash
-./scripts/setup-crate-submodules.sh    # exports Rust crates and adds submodules
-./scripts/setup-firmware-submodule.sh # exports esp-pot-o-miner and adds submodule
-```
-
-Commit the updated `.gitmodules` and submodule entries. Dependency versions between the validator and the library crates are aligned via the workspace and `[patch.crates-io]` in the validator `Cargo.toml` when building in-repo.
-
-## Running the Stack Locally
-
-**Prerequisites:** Docker, Docker Compose, Make, Git.
-
-```bash
-git clone --recurse-submodules https://github.com/TribeWarez/tribe tribe
-cd tribe
-cp .env.example .env
-# Edit .env with your API keys and secrets (never commit real values)
-
-make infra-up      # Base infrastructure (nginx-proxy, SSL)
-make web3-up       # Web3 stack (DeFi, terminal, docs)
-make web3-rpc-up   # Testnet RPC (Solana, EVM, PoT-O validator)
-```
+Explore services:
+- DeFi → https://defi.tribewarez.com
+- Docs → https://docs.tribewarez.com
+- Mystic → https://mystic.tribewarez.com
+- RPCs → `testnet-solana.rpc.gateway.tribewarez.com` / `testnet-eth.rpc.gateway.tribewarez.com` / `pot.rpc.gateway.tribewarez.com`
 
 ## Key Services
 
-| Service        | URL |
-|----------------|-----|
-| DeFi Portal    | [defi.tribewarez.com](https://defi.tribewarez.com) |
-| Terminal       | [terminal.tribewarez.com](https://terminal.tribewarez.com) |
-| Docs           | [docs.tribewarez.com](https://docs.tribewarez.com) |
-| Solana RPC     | testnet-solana.rpc.gateway.tribewarez.com |
-| EVM RPC        | testnet-eth.rpc.gateway.tribewarez.com |
-| PoT-O Validator| pot.rpc.gateway.tribewarez.com |
-| Status API     | status.rpc.gateway.tribewarez.com |
+| Service | URL |
+|---------|-----|
+| DeFi Portal | [defi.tribewarez.com](https://defi.tribewarez.com) |
+| Mystic / DeFi Games | [mystic.tribewarez.com](https://mystic.tribewarez.com) |
+| Terminal | [terminal.tribewarez.com](https://terminal.tribewarez.com) |
+| Docs | [docs.tribewarez.com](https://docs.tribewarez.com) |
+| Hugging Face | [huggingface.co/Tribewarez](https://huggingface.co/Tribewarez) |
+| Solana RPC | testnet-solana.rpc.gateway.tribewarez.com |
+| EVM RPC | testnet-eth.rpc.gateway.tribewarez.com |
+| PoT-O Validator | pot.rpc.gateway.tribewarez.com |
+| Status API | status.rpc.gateway.tribewarez.com |
 
-## Docs and RFCs
+## Documentation & RFCs
 
-- [Getting Started](https://docs.tribewarez.com/getting-started) — Prerequisites and quick start.
-- [PoT-O Mining](https://docs.tribewarez.com/pot-o/) — How Proof of Tensor Optimizations works.
-- [PoT-O RFC Series](https://docs.tribewarez.com/public/) — TW-RPC-001 (PoT-O core), TW-RPC-003 (staking), TW-RPC-004 (vault), TW-RPC-005 (extensions).
+- [Getting Started](https://docs.tribewarez.com/getting-started)
+- [PoT-O Mining Guide](https://docs.tribewarez.com/pot-o/)
+- [RFC Series](https://docs.tribewarez.com/public/) (TW-RPC-001 → PoT-O core, 003 → staking, 004 → vault, 005 → extensions)
 
-## Status
+## Contributing
 
-[![PoT-O Validator](https://img.shields.io/github/actions/workflow/status/TribeWarez/tribe/pot-o-validator.yml?branch=main)](https://github.com/TribeWarez/tribe/actions/workflow/pot-o-validator.yml)
-[![Solana Programs](https://img.shields.io/github/actions/workflow/status/TribeWarez/tribe/programs.yml?branch=main)](https://github.com/TribeWarez/tribe/actions/workflow/programs.yml)
-[![Security scan](https://img.shields.io/github/actions/workflow/status/TribeWarez/tribe/security-scan.yml?branch=main)](https://github.com/TribeWarez/tribe/actions/workflow/security-scan.yml)
-[![Deploy (production)](https://img.shields.io/github/deployments/TribeWarez/tribe/production)](https://github.com/TribeWarez/tribe/deployments)
+We're in open beta — issues, PRs, and Discussions welcome!
 
-## CI and releases
+> **🔓 All core implementation logic is open source under MIT.** Most repositories are open for contribution right now. For stacks approaching their 1.0 release, full public contribution opens on release — check each repo's CONTRIBUTING.md or Discussions for current status.
 
-- **Main repo**
-  - **PoT-O Validator** (`.github/workflows/pot-o-validator.yml`): on push/PR to `main`, checks out with submodules, runs `cargo test` and `cargo build --release` in the pot-o-validator workspace.
-  - **Solana Programs** (`.github/workflows/programs.yml`): on push/PR to `main`, runs `cargo check --workspace` in the programs workspace (Anchor build can be added when needed).
+Focus areas: bug fixes, challenge ideas, edge optimizations, DeFi program audits, synthetic data quality, DeFi game mechanics.
+Start with Discussions for ideas/questions.
 
-- **Rust library crates** (when used as separate repos)
-  - **CI** (`.github/workflows/ci.yml`): `cargo test`, `cargo clippy`, `cargo fmt --check` on push/PR to `main`.
-  - **Release** (`.github/workflows/release.yml`): on tag `v*.*.*`, runs tests then `cargo publish` to crates.io (requires repo secret `CARGO_REGISTRY_TOKEN`), and creates a GitHub Release.
+This ecosystem is permanently open-source under MIT. Join the guild building tensor-first blockchain + AI infra.
 
-- **ESP firmware (esp-pot-o-miner)** (when used as a separate repo)
-  - **CI** (`.github/workflows/ci.yml`): PlatformIO build for `esp32s` and `esp8266` on push/PR.
-  - **Release** (`.github/workflows/release.yml`): on tag `v*.*.*`, builds both envs, uploads firmware artifacts, and creates a GitHub Release. Optional: set `PLATFORMIO_AUTH_TOKEN` to publish to the PlatformIO registry.
-
-- **Desktop CLI miner (pot-o-miner-cli)** ([TribeWarez/pot-o-miner-cli](https://github.com/TribeWarez/pot-o-miner-cli))
-  - **CI** (`.github/workflows/ci.yml`): checks bash/curl/jq/python3, runs `./pot-o-mine --help`, and validates Python syntax. No publish step; tag releases can be created manually from the Releases UI.
-
-**Release playbooks**
-
-- **Rust crates:** Bump `version` in `Cargo.toml`, commit, then `git tag v0.1.1 && git push origin v0.1.1`. CI publishes to crates.io and creates the GitHub Release.
-- **Firmware:** Bump version in `platformio.ini` (e.g. `POT_O_VERSION`), commit, then tag and push as above; CI builds and attaches binaries to the GitHub Release.
+💪 **Let's optimize reality.**
 
 ## Security
 
 Do not commit real API keys, client secrets, or private keys. Use `.env` (gitignored) or a secrets manager. Public endpoints do not expose internal URLs or credentials.
-
-## Contributing
-
-The ecosystem is in **testnet/experimental** phase. As repositories are cleaned up and validated, they will be opened for public contribution. We welcome issues, pull requests, and discussion around the RFC series. Get in touch via the repositories and docs linked above.
-cd ~
