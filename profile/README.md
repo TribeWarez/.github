@@ -6,7 +6,11 @@
 
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Tribewarez-orange?style=flat-square&logo=huggingface)](https://huggingface.co/Tribewarez)
 ![Status: Live Alpha](https://img.shields.io/badge/Status-Live%20Alpha-purple?style=flat-square)
-
+[![GitHub Discussions](https://img.shields.io/badge/Discussions-Join-success?style=flat-square&logo=github)](https://github.com/orgs/TribeWarez/discussions)
+[![GitHub Commit Activity](https://img.shields.io/github/commit-activity/m/TribeWarez/pot-o-core?style=flat-square&logo=github&label=activity)](https://github.com/TribeWarez)
+[![Organization Repos](https://img.shields.io/badge/Repos-Public%20%26%20?style=flat-square&logo=github)](https://github.com/TribeWarez)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20Us-ff5e5b?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/tribewarez)
+[![Security Policy](https://img.shields.io/badge/Security-Policy-red?style=flat-square&logo=githubsecurity)](https://github.com/TribeWarez/.github-private)
 ---
 
 ## Overview – High-Efficiency AIoT Inference, Mesh Infrastructure & HexChain Topologies
