@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/68df66ec-acd3-4d81-9822-f13f82dd50d8" alt="TribeWarez Logo" width="800">
-</p>
-
 # TribeWarez
 
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Tribewarez-orange?style=flat-square&logo=huggingface)](https://huggingface.co/Tribewarez)
